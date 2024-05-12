@@ -67,11 +67,11 @@
             "id": "spr1",
             "enabled": true,
             "coin": "spectre",
-            "address": "kaspa:qpee454h906cyt6pqr5gfegpxx7xjqp79dtwcqz8t698ugulhq8fxg56uaxm9",
+            "address": "spectre:qz0f4auh9aslgvqnhvlzdfdushaus58r9d8pmrwd7sh04vuvu59s5qkk243cp",
             "rewardRecipients": [
                 {
                     "type": "op",
-                    "address": "kaspa:qpee454h906cyt6pqr5gfegpxx7xjqp79dtwcqz8t698ugulhq8fxg56uaxm9",
+                    "address": "spectre:qz0f4auh9aslgvqnhvlzdfdushaus58r9d8pmrwd7sh04vuvu59s5qkk243cp",
                     "percentage": 1
                 }
             ],
@@ -114,7 +114,7 @@
             ],
             "paymentProcessing": {
                 "enabled": true,
-                "walletPassword": "<The Kaspa's wallet password which owns the pool address>",
+                "walletPassword": "spectre:qz0f4auh9aslgvqnhvlzdfdushaus58r9d8pmrwd7sh04vuvu59s5qkk243cp",
                 "minimumPayment": 1,
                 "payoutScheme": "PPLNS",
                 "payoutSchemeConfig": {
