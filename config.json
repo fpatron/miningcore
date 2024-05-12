@@ -86,7 +86,7 @@
             "ports": {
                 "3094": {
                     "listenAddress": "0.0.0.0",
-                    "difficulty": 14,
+                    "difficulty": 12,
                     "varDiff": {
                         "minDiff": 12,
                         "maxDiff": null,
