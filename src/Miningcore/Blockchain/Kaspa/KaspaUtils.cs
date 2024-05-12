@@ -434,6 +434,15 @@ public class KaspaAddressUtility
                 };
 
                 break;
+            case "SPR":
+                this.stringsToBech32Prefixes = new Dictionary<string, KaspaBech32Prefix>
+                {
+                    { SpectreConstants.ChainPrefixMainnet, KaspaBech32Prefix.KaspaMain },
+                    { SpectreConstants.ChainPrefixDevnet, KaspaBech32Prefix.KaspaDev },
+                    { SpectreConstants.ChainPrefixTestnet, KaspaBech32Prefix.KaspaTest },
+                    { SpectreConstants.ChainPrefixSimnet, KaspaBech32Prefix.KaspaSim },
+                };
+                break;
             default:
                 this.stringsToBech32Prefixes = new Dictionary<string, KaspaBech32Prefix>
                 {

@@ -134,6 +134,16 @@ public static class SedraCoinConstants
     public const string ChainPrefixMainnet = "sedra";
 }
 
+public static class SpectreConstants
+{
+    // List of SPR prefixes: https://github.com/spectre-project/spectred/blob/main/util/address.go
+    public const string ChainPrefixDevnet = "spectredev";
+    public const string ChainPrefixSimnet = "spectresim";
+    public const string ChainPrefixTestnet = "spectretest";
+    public const string ChainPrefixMainnet = "spectre";
+}
+
+
 public enum KaspaBech32Prefix
 {
     Unknown = 0,
