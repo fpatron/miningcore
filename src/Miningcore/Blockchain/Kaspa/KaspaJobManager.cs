@@ -275,7 +275,6 @@ public class KaspaJobManager : JobManagerBase<KaspaJob>
                 return new KarlsencoinJob(customBlockHeaderHasher, customCoinbaseHasher, customShareHasher);
             case "NTL":
             case "NXL":
-            case "SPR":
                 if(customBlockHeaderHasher is not Blake2b)
                     customBlockHeaderHasher = new Blake2b(Encoding.UTF8.GetBytes(KaspaConstants.CoinbaseBlockHash));
 
