@@ -749,7 +749,7 @@ public class KaspaJobManager : JobManagerBase<KaspaJob>
         extraPoolPaymentProcessingConfig = pc.PaymentProcessing.Extra.SafeExtensionDataAs<KaspaPaymentProcessingConfigExtra>();
         
         maxActiveJobs = extraPoolConfig?.MaxActiveJobs ?? 8;
-        extraData = extraPoolConfig?.ExtraData ?? "Miningcore.developers[\"Vodhash\"]";
+        extraData = extraPoolConfig?.ExtraData ?? "Miningcore.developers[\"vodhash\"]";
         
         // extract standard daemon endpoints
         daemonEndpoints = pc.Daemons
