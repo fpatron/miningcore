@@ -354,7 +354,7 @@ public class KaspaJobManager : JobManagerBase<KaspaJob>
                     {
                         job = CreateJob((long) blockTemplate.Header.DaaScore);
 
-                        job.Init(blockTemplate, NextJobId());
+                        job.Init(blockTemplate, NextJobId(""));
 
                         lock(jobLock)
                         {
@@ -563,9 +563,6 @@ public class KaspaJobManager : JobManagerBase<KaspaJob>
 
         var jobId = submitParams[1] as string;
         var nonce = submitParams[2] as string;
-
-        //if (jobId.Length < 8)
-        //    jobId = jobId.PadLeft(8, '0');
 
         KaspaJob job;
 
