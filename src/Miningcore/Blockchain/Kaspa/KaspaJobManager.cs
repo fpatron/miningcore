@@ -564,12 +564,12 @@ public class KaspaJobManager : JobManagerBase<KaspaJob>
         var jobId = submitParams[1] as string;
         var nonce = submitParams[2] as string;
 
-        if (jobId.Length < 8) {
-            jobId = jobId.ToStringHex8();
-        }
+        if (jobId.Length < 8)
+            jobId = $"{int.Parse(jobId):D8}";
 
          logger.Info(() => $"HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERE");
-              logger.Info(() => $"{jobId.ToStringHex8()}");
+              logger.Info(() => $"{jobId}");
+              logger.Info(() => $"HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERE");
 
         KaspaJob job;
 
