@@ -565,24 +565,12 @@ public class KaspaJobManager : JobManagerBase<KaspaJob>
         var nonce = submitParams[2] as string;
 
         if (jobId.Length < 8)
-            jobId = $"{int.Parse(jobId):D8}";
-
-         logger.Info(() => $"HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERE");
-              logger.Info(() => $"{jobId}");
-              logger.Info(() => $"HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERE");
+            jobId = jobId.PadLeft(8, '0');
 
         KaspaJob job;
 
         lock(jobLock)
         {
-  
-     
-            for (int index = 0; index < validJobs.Count; index++) {
-                logger.Info(() => $"job] {validJobs[index].JobId}");
-            }
-               logger.Info(() => $"HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERE");
-     
-                                                    
             job = validJobs.FirstOrDefault(x => x.JobId == jobId);
         }
 
