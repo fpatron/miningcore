@@ -66,7 +66,8 @@ public abstract class JobManagerBase<TJob>
         if(format != null)
             return value.ToString(format);
 
-        return value.ToStringHex8();
+        //return value.ToStringHex8();
+        return value;
     }
 
     protected IObservable<string> BtStreamSubscribe(ZmqPubSubEndpointConfig config)
