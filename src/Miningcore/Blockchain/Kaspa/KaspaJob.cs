@@ -354,10 +354,10 @@ public class KaspaJob
         nonce = (nonce.StartsWith("0x")) ? nonce.Substring(2) : nonce;
         
         // Add extranonce to nonce if enabled and submitted nonce is shorter than expected (16 - <extranonce length> characters)
-        if (nonce.Length <= (KaspaConstants.NonceLength - context.ExtraNonce1.Length))
-        {
-            nonce = context.ExtraNonce1.PadRight(KaspaConstants.NonceLength - context.ExtraNonce1.Length, '0') + nonce;
-        }
+        //if (nonce.Length <= (KaspaConstants.NonceLength - context.ExtraNonce1.Length))
+        //{
+        //    nonce = context.ExtraNonce1.PadRight(KaspaConstants.NonceLength - context.ExtraNonce1.Length, '0') + nonce;
+        //}
         
         // dupe check
         if(!RegisterSubmit(nonce))
