@@ -94,8 +94,8 @@ public class KaspaPool : PoolBase
         
         var context = connection.ContextAs<KaspaWorkerContext>();
         
-        if(!context.IsSubscribed)
-            throw new StratumException(StratumError.NotSubscribed, "subscribe first please, we aren't savages");
+        //if(!context.IsSubscribed)
+        //    throw new StratumException(StratumError.NotSubscribed, "subscribe first please, we aren't savages");
         
         var requestParams = request.ParamsAs<string[]>();
 
