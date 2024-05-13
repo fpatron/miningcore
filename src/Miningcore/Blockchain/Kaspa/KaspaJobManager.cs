@@ -564,6 +564,13 @@ public class KaspaJobManager : JobManagerBase<KaspaJob>
         var jobId = submitParams[1] as string;
         var nonce = submitParams[2] as string;
 
+
+        logger.Info(() => $"HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERE");
+        logger.Info(() => $"submitParams[0] {submitParams[0] as string}");
+        logger.Info(() => $"submitParams[1] {submitParams[1] as string}");
+        logger.Info(() => $"submitParams[2] {submitParams[2] as string}");
+        logger.Info(() => $"HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERE");
+
         KaspaJob job;
 
         lock(jobLock)
