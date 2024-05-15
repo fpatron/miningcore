@@ -5034,5 +5034,71 @@
         "explorerBlockLink": "https://explorer.spectre-network.org//blocks/$hash$",
         "explorerTxLink": "https://explorer.spectre-network.org/txs/{0}",
         "explorerAccountLink": "https://explorer.spectre-network.org/addresses/{0}"
+    },
+    "rogu": {
+        "name": "Rogu",
+        "canonicalName": "Rogu",
+        "symbol": "ROGU",
+        "family": "bitcoin",
+        "website": "https://rogucoin.com",
+        "market": "",
+        "twitter": "https://twitter.com/rogucoin",
+        "telegram": "",
+        "discord": "https://discord.gg/7J7FMmrpEU",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "neoscrypt",
+            "args": [
+                0
+            ]
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "neoscrypt",
+                    "args": [
+                        0
+                    ]
+                }
+            ]
+        },
+        "hasMasterNodes": true,
+        "shareMultiplier": 65536,
+        "explorerBlockLink": "https://explorer.rogucoin.com/block/{0}",
+        "explorerTxLink": "https://explorer.rogucoin.com/tx/{0}",
+        "explorerAccountLink": "https://explorer.rogucoin.com/address/{0}"
+    },
+    "fewbit": {
+        "name": "FewBit",
+        "canonicalName": "FewBit",
+        "symbol": "FBIT",
+        "family": "bitcoin",
+        "website": "https://fewbit.net/",
+        "market": "",
+        "twitter": "",
+        "discord": "",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "ghostrider"
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "sha256d"
+                }
+            ]
+        },
+        "hasFounderFee": true,
+        "hasMasterNodes": true,
+        "shareMultiplier": 65536,
+        "explorerBlockLink": "https://explorer.fewbit.net/block/$height$",
+        "explorerTxLink": "https://explorer.fewbit.net/x/{0}",
+        "explorerAccountLink": "https://explorer.fewbit.net/address/{0}"
     }
 }
