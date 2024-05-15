@@ -113,11 +113,13 @@ public class StatsRecorder : BackgroundService
                 cf.Run(con => shareRepo.GetHashAccumulationBetweenAsync(con, poolId, timeFrom, now, ct)));
 
             var byMiner = result.GroupBy(x => x.Miner).ToArray();
+            var byWorkers = result.GroupBy(x => x.Worker).ToArray();
 
             if (result.Length > 0)
             {
                 // pool miners
                 pool.PoolStats.ConnectedMiners = byMiner.Length; // update connected miners
+                pool.PoolStats.ConnectedWorkers = result.Length; // update connected miners
 
                 // Stats calc windows
                 var timeFrameBeforeFirstShare = ((result.Min(x => x.FirstShare) - timeFrom).TotalSeconds);
@@ -144,6 +146,7 @@ public class StatsRecorder : BackgroundService
             {
                 // reset
                 pool.PoolStats.ConnectedMiners = 0;
+                pool.PoolStats.ConnectedWorkers = 0;
                 pool.PoolStats.PoolHashrate = 0;
                 pool.PoolStats.SharesPerSecond = 0;
 
